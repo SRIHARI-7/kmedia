@@ -118,7 +118,7 @@ img{
 
 /*------------------------ Navigation Styling ---------------------*/
 nav{
-    min-width: 100vw;
+    min-width: 100%;
     background: var(--color-white);
     padding: 0.7rem 0 ;
     position: fixed;
@@ -210,12 +210,16 @@ main .container .left .profile{
     cursor: pointer;
     translate: all 300ms ease;
     position: relative;
-    
+    text-decoration: none;
+    color: var(--color-black);
 
 }
 
 .left .sidebar .menu-item:hover{
     background: var(--color-light);
+}
+.left .sidebar .menu-item:active{
+    color: var(--color-primary);
 }
 
 .left .sidebar i{
@@ -350,26 +354,26 @@ main .container .left .profile{
 }
 
  .middle .stories .story:nth-child(1){
-    background: url('./image/story5.jpeg') no-repeat center center/cover;
+    background: url('../image/story5.jpeg') no-repeat center center/cover;
  }
  .middle .stories .story:nth-child(2){
-    background: url('./image/story2.jpg') no-repeat center center/cover;
+    background: url('../image/story2.jpg') no-repeat center center/cover;
  }
 
  .middle .stories .story:nth-child(3){
-    background: url('./image/story3.jpg') no-repeat center center/cover;
+    background: url('../image/story3.jpg') no-repeat center center/cover;
  }
 
  .middle .stories .story:nth-child(4){
-    background: url('./image/story1.jpeg') no-repeat center center/cover;
+    background: url('../image/story1.jpeg') no-repeat center center/cover;
  }
 
  .middle .stories .story:nth-child(5){
-    background: url('./image/story4.jpeg') no-repeat center center/cover;
+    background: url('../image/story4.jpeg') no-repeat center center/cover;
  }
 
  .middle .stories .story:nth-child(6){
-    background: url('./image/story6.jpeg') no-repeat center center/cover;
+    background: url('../image/story6.jpeg') no-repeat center center/cover;
  }
 
  .middle .story .profile-picture{
@@ -381,7 +385,7 @@ main .container .left .profile{
 
 
 /*-------------- Create Post --------------*/
-.middle .create-post{
+.middle .create-text{
     width: 100%;
     display: flex;
     align-items: center;
@@ -392,7 +396,7 @@ main .container .left .profile{
     border-radius: var(--border-radius);
 } 
 
-.middle .create-post input[type='text']{
+.middle .create-text input[type='text']{
     justify-self: start;
     width: 100%;
     padding-left: 1rem;
@@ -579,8 +583,8 @@ main .container .right{
 /*---------------- Theme Customization -------------------*/
 .customize-theme{
     background: rgba(255, 255, 255, 0.5);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -729,8 +733,8 @@ box-shadow: 0 0 1rem var(--color-primary);
 /*---------------- Upload -------------------*/
 .upload{
     background: rgba(255, 255, 255, 0.5);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -852,11 +856,12 @@ section .details span{
 /*---------------- View Stories -------------------*/
 .view-story{
     background: rgba(255, 255, 255, 0.5);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
+    bottom: 5rem;
     z-index: 100;
     text-align: center;
     display: grid;
@@ -866,6 +871,9 @@ section .details span{
 }
 
 .view-story .card{
+    position: relative;
+width: 80vw;
+height: auto;
 background: var(--color-white);
 padding: 3rem;
 border-radius: var(--card-border-radius);
@@ -874,18 +882,19 @@ box-shadow: 0 0 1rem var(--color-primary);
 }
 
 .view-story .card .wrapper {
-    width: 100%;
-    
+    position: relative;
     padding: 30px 30px;
     background: #111112;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    position: relative;
+   
   }
   .view-story .card .wrapper .content{
-      z-index: 999;
-      position: relative;
-      color: #fff;
+
+    z-index: 999;
+    position: relative;
+    color: #fff;
+    
   }
   .view-story .card .wrapper .content .tabs{
       width: 100%;
@@ -911,10 +920,11 @@ box-shadow: 0 0 1rem var(--color-primary);
   
   .view-story .card .wrapper .content .video-block{
       margin: 50px 0;
+      
   }
   .view-story .card .wrapper .content .video-lab video{
-      width: 100%;
-      height: 100%;
+    
+      
       border-radius: 20px;
   }
   .view-story .card .wrapper .content .c5 .left-controls .ctrl{
@@ -1033,6 +1043,30 @@ box-shadow: 0 0 1rem var(--color-primary);
       }
   }
 
+  /*---------------- Settings -------------------*/
+.settings{
+    background: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.settings .card{
+background: var(--color-white);
+padding: 3rem;
+border-radius: var(--card-border-radius);
+width: 80%;
+box-shadow: 0 0 1rem var(--color-primary);
+}
+
 /*---------- MEDIA QUERIES(For small laptops and big tablets) ------------*/
 @media screen and (max-width:1200px){
     .container{
@@ -1101,5 +1135,24 @@ box-shadow: 0 0 1rem var(--color-primary);
     .customize-theme .card{
         width: 92vw;
     }
-    
+
+    .customize-theme .choose-bg{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .view-story .card{
+        background: var(--color-white);
+        padding: 0.3rem;
+        border-radius: var(--card-border-radius);
+        width: 80%;
+        box-shadow: 0 0 1rem var(--color-primary);
+    }
+
+    .middle .create-text input[type='submit']{
+        width: 50%;
+        margin-right: 5rem;
+    }
+
 }
