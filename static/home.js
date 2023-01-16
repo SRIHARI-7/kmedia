@@ -95,12 +95,12 @@ let isPlaying = false;
 let curr_track = document.createElement('video');
 let track_list = [
     {
-        path: "story videos/business-salesman.mp4"
+        path: "./story videos/business-salesman.mp4"
 	},
 	
 ];
 let track = [
-    "story videos/business-salesman.mp4"
+    "./story videos/business-salesman.mp4"
 ]
 let radome_track = track[Math.floor(Math.random()*track.length)]; //sorting items one-by-one and picking them randomly
 window.onload = (e)=>{
