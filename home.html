@@ -55,12 +55,24 @@
                 <label class="btn btn-primary" for="create-text">
                     Create
                 </label>
+                <div class="wrapper">
                 <!-- Profile Picture -->
-                <div class="profile-picture">
+                <div class="profile-picture"   onclick="navMenuOpen();">
                     <img src="./image/profile-pic.jpeg" >
                 </div>
-
+                <div class="menu">
+                    <h5>Emma Watson<br><span class="text-muted">Student</span></h5>
+                    <ul>
+                        <li><span><i class="uil uil-user-circle"></i></span><a href="#" class="text-bold">My Profile</a></li>
+                        <li><span><i class="uil uil-edit"></i></span><a href="#" class="text-bold">Edit Profile</a></li>
+                        <li><span><i class="uil uil-setting"></i></span><a href="#" class="text-bold">Settings</a></li>
+                        <li><span><i class="uil uil-question-circle"></i></span><a href="#" class="text-bold">Help</a></li>
+                        <li><span><i class="uil uil-signout"></i></span><a href="#" class="text-bold">Logout</a></li>
+                    </ul>
+                </div>
+                    
             </div>
+        </div>
         </div>
     </nav><!--Navigation Section ENDS!-->
 
@@ -91,13 +103,47 @@
                 <div class="sidebar">
 
                     <!-- Home -->
-                    <a class="menu-item active" href="./home.html">
+                    <a class="menu-item active-menu" href="./home.html">
                         <span><i class="uil uil-estate"></i></span><h3>Home</h3>  
                     </a>
 
                     <!-- Messages -->
                     <a class="menu-item" id="messages-notification">
-                        <span><i class="uil uil-envelope"><small class="notification-count">5+</small></i></span><h3>Messages</h3>
+                        <span><i class="uil uil-envelope"><small class="notification-count">3</small></i></span><h3>Messages</h3>
+                        <div class="message-popup">
+                            <div>
+                                <div class="profile-picture">
+                                    <img src="./image/profile-pic3.jpeg" alt="">
+                                    <div class="active"></div>
+                                </div>
+                                <div class="message-body">
+                                    <h5>Udhayarajan</h5>
+                                    <p class="text-bold">Venthu thaninthathu kaadu Allen sir...ku Vanakatha podu</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="profile-picture">
+                                    <img src="./image/profile-pic2.jpeg" alt="">
+                                    
+                                </div>
+                                <div class="message-body">
+                                    <h5>Kannimuthu sir</h5>
+                                    <p class="text-muted">Be strong in Data Structures...to place in good company</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="profile-picture">
+                                    <img src="./image/profile-pic2.jpeg" alt="">
+                                    <div class="active"></div>
+                                </div>
+                                <div class="message-body">
+                                    <h5>Kannimuthu sir</h5>
+                                    <p class="text-bold">Be strong in Data Structures...to place in good company</p>
+                                </div>
+                            </div>
+                        </div>
                     </a>
 
                     <!-- Upload File -->
@@ -108,7 +154,7 @@
 
                     <!-- Notification -->
                     <a class="menu-item" id="notification">
-                        <span><i class="uil uil-bell"><small class="notification-count">7</small></i></span><h3>Notification</h3>
+                        <span><i class="uil uil-bell"><small class="notification-count">6</small></i></span><h3>Notification</h3>
                         <!-- Notification Popup -->
                         <div class="notification-popup">
                             <div>
@@ -181,31 +227,17 @@
                         <!-- Notification Popup Ends! -->
                     </a>
                     
-                    <!-- Bookmarks -->
-                    <a class="menu-item">
-                        <span><i class="uil uil-bookmark"></i></span><h3>Bookmarks</h3>
-                    </a>
-                    
-                    <!-- Analytics -->
-                    <a class="menu-item">
-                        <span><i class="uil uil-chart-line"></i></span><h3>Analytics</h3>
-                    </a>
-                    
                     <!-- Theme -->
                     <a class="menu-item" id="theme">
                         <span><i class="uil uil-palette"></i></span><h3>Theme</h3>
                     </a>
                     
-                    <!-- Settings -->
-                    <a class="menu-item">
-                        <span><i class="uil uil-setting"></i></span><h3>Settings</h3>
-                    </a>
 
                 </div>
                 <!-- Sidebar Ends!-->
 
                 <!-- Create Thought Button -->
-                <label for="create-text" class="btn btn-primary">Post in Your Mind</label>
+                <label for="create-text" class="btn btn-primary">Post your Thoughts</label>
                 <!-- Create Post Button -->
                 <label for="create-post" class="btn btn-primary">Create Post</label>
             </div>
@@ -423,41 +455,51 @@
                     <div class="category">
                         <h6 class="active">Primary</h6>
                         
-                        <h6 class="message-requests">Requests(7)</h6>
+                        
                     </div>
                     <!-- Message -->
-                    <div class="message">
-                        <div class="profile-picture">
-                            <img src="./image/profile-pic3.jpeg" alt="">
-                            <div class="active"></div>
+                    
+                        <div class="message">
+                            <a class="message-item">
+                            <div class="profile-picture">
+                                <img src="./image/profile-pic3.jpeg" alt="">
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Udhayarajan</h5>
+                                <p class="text-bold">Venthu thaninthathu kaadu Allen sir...ku Vanakatha podu</p>
+                            </div>
+                            </a>
                         </div>
-                        <div class="message-body">
-                            <h5>Udhayarajan</h5>
-                            <p class="text-bold">Venthu thaninthathu kaadu Allen sir...ku Vanakatha podu</p>
+                    
+                    
+                    
+                        <div class="message">
+                            <a class="message-item">
+                            <div class="profile-picture">
+                                <img src="./image/profile-pic2.jpeg" alt="">
+                                
+                            </div>
+                            <div class="message-body">
+                                <h5>Kannimuthu sir</h5>
+                                <p class="text-muted">Be strong in Data Structures...to place in good company</p>
+                            </div>
+                        </a>
                         </div>
-                    </div>
 
-                    <div class="message">
-                        <div class="profile-picture">
-                            <img src="./image/profile-pic2.jpeg" alt="">
-                            
+                        <div class="message">
+                            <a class="message-item">
+                            <div class="profile-picture">
+                                <img src="./image/profile-pic2.jpeg" alt="">
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Kannimuthu sir</h5>
+                                <p class="text-bold">Be strong in Data Structures...to place in good company</p>
+                            </div>
+                        </a>
                         </div>
-                        <div class="message-body">
-                            <h5>Kannimuthu sir</h5>
-                            <p class="text-muted">Be strong in Data Structures...to place in good company</p>
-                        </div>
-                    </div>
-
-                    <div class="message">
-                        <div class="profile-picture">
-                            <img src="./image/profile-pic2.jpeg" alt="">
-                            <div class="active"></div>
-                        </div>
-                        <div class="message-body">
-                            <h5>Kannimuthu sir</h5>
-                            <p class="text-bold">Be strong in Data Structures...to place in good company</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 <!-- Messages Ends! -->
 
