@@ -26,8 +26,26 @@ const progressArea=document.querySelector(".progress-area");
 const uploadedArea=document.querySelector(".uploaded-area");
 
 
-//For File Uploading
+//Navigation Menu
+const navMenu=document.querySelector('#nav-menu');
+const navMenuClass=document.querySelector('.menu');
+//for Open and Close 
+const openNavMenuArea=()=>{
+    const visibility=navMenuClass.style.visibility;
+    if("visible"==visibility){
+        navMenuClass.style.visibility='hidden';
+        navMenuClass.style.opacity='0';
+    }
+    else{
+        navMenuClass.style.visibility='visible';
+        navMenuClass.style.opacity='1';
+    }
+    
 
+}
+navMenu.addEventListener('click', openNavMenuArea);
+
+//For File Uploading
 // open model
 const openUploadArea=()=>{
     uploadClass.style.display='grid';
@@ -206,11 +224,7 @@ img_box.addEventListener("click", (e) => {
     },2000);
 });
   
-/* Navigation Menu Bar */
-function navMenuOpen(){
-    const toggleNavMenu=document.querySelector('.menu');
-    toggleNavMenu.classList.toggle('active');
-}
+
 
 /*---------Sidebar-------------*/
 // remove active class from all menu items
