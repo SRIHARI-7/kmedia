@@ -45,6 +45,26 @@ const openNavMenuArea=()=>{
 }
 navMenu.addEventListener('click', openNavMenuArea);
 
+//Post Achivements
+const achivementPost=document.querySelector('#achivement-post');
+const achivementPostClass=document.querySelector('.achivement-post');
+const post=document.querySelector('#post');
+// open model
+const openAchivementsPostArea=()=>{
+    achivementPostClass.style.display='grid';
+}
+achivementPost.addEventListener('click', openAchivementsPostArea);
+
+//close model
+const closeAchivementsPostArea=(e)=>{
+    if(e.target.classList.contains('btn-post')){
+        achivementPostClass.style.display='none';
+    }
+}
+post.addEventListener('click', closeAchivementsPostArea);
+
+
+
 //For File Uploading
 // open model
 const openUploadArea=()=>{
@@ -113,12 +133,12 @@ let isPlaying = false;
 let curr_track = document.createElement('video');
 let track_list = [
     {
-        path: "./story videos/business-salesman.mp4"
+        path: "./story videos/story1.mp4"
 	},
 	
 ];
 let track = [
-    "./story videos/business-salesman.mp4"
+    "./story videos/story1.mp4"
 ]
 let radome_track = track[Math.floor(Math.random()*track.length)]; //sorting items one-by-one and picking them randomly
 window.onload = (e)=>{
