@@ -133,12 +133,12 @@ let isPlaying = false;
 let curr_track = document.createElement('video');
 let track_list = [
     {
-        path: "./story videos/story1.mp4"
+        path: "./story videos/story2.mp4"
 	},
 	
 ];
 let track = [
-    "./story videos/story1.mp4"
+    "./story videos/story2.mp4"
 ]
 let radome_track = track[Math.floor(Math.random()*track.length)]; //sorting items one-by-one and picking them randomly
 window.onload = (e)=>{
